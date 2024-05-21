@@ -18,7 +18,7 @@ var set = pets.slice(1, 3);
 
 // console.log(set);
 
-// var tableNo = 2 ;
+// Loop Practice
 
 var obj = [
   (user = {
@@ -31,30 +31,68 @@ var obj = [
     age: "18",
     address: "karachi",
   }),
-  (userData = {
+  (userDataset = {
     name: "shahid",
     age: "18",
     address: "karachi",
   }),
 ];
 
-var div= document.querySelector(".div");
+var div = document.querySelector(".div");
+
+var set = obj.forEach(function (item, index) {
+  div.innerHTML += `<span>${index}</span>`;
+  div.innerHTML += `<p>${item.name}</p>`;
+  div.innerHTML += `<p>${item.age}</p>`;
+  div.innerHTML += `<p>${item.address}</p>`;
+});
+
 // console.log(obj)
 
 for (var i = 0; i < obj.length; i++) {
-    // var abc = "key" + [i];
+  var abc = "key" + [i];
 
-    // obj[0][abc][0]="kuchbhi";
-//   console.log(obj[i]);
+  // obj[0][abc] = "kuchbhi" + [i];
+  // console.log(obj[i].name);
 
-  var keys= Object.keys(obj[i]);
-  console.log(keys);
+  // var keys= Object.keys(obj[i]);
+  // console.log(keys);
 
-//   obj[i].name.forEach(function(name,index){
-//     console.log(name);
-//   })
+  // obj.forEach(function(key,index){
+  //   console.log(key.address);
+  // })
 }
 
-// for (var i = 1; i <= 10000; i++) {
-//   console.log(`10  x  ${i} =  ${100 * [i]}`);
-// }
+// console.log(obj);
+
+// let arr_1 = [3, 5, 22, 5,  7,  2,  45, 75, 89, 21, 2]; // --> 276
+// let arr_2 = [9, 2, 42, 55, 71, 22, 4,  5,  90, 25, 26]; // --> 351
+// Example output:
+// 276 + 351 = 627
+
+var number2 = [9, 2, 42, 55, 71, 22, 4, 5, 90, 25, 26];
+var number1 = [3, 5, 22, 5, 7, 2, 45, 75, 89, 21, 2];
+var sum = 0;
+var sum2 = 0;
+
+for (var i = 0; i < number1.length; i++) {
+  sum += number1[i];
+}
+for (var j = 0; j < number2.length; j++) {
+  sum2 += number2[j];
+}
+
+// console.log(sum + sum2);
+// console.log(sum2 );
+
+var firstNames = ["BlueRay ", "Upchuck ", "Lojack ", "Gizmo ", "Do-Rag "];
+var lastNames = ["Zzz", "Burp", "Dogbone", "Droop"];
+var fullNames = [];
+for (var i = 0; i < firstNames.length; i++) {
+  for (var j = 0; j < lastNames.length; j++) {
+    fullNames.push(firstNames[i] + lastNames[j]);
+  }
+}
+
+console.log(fullNames)
+
